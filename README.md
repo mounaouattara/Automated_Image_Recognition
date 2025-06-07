@@ -47,6 +47,8 @@ pip install -e .
 
 ## Préparer les données
 
+Les données doivent être ajoutées localement.
+
 ### 1. Télécharge les données d’images
 - Va sur [Fruits 360 - Kaggle](https://www.kaggle.com/datasets/moltean/fruits) et télécharge le dataset.
 - Place les images dans :
