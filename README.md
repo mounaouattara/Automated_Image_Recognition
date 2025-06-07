@@ -1,140 +1,91 @@
-# Automated Product Recognition
+# Product Recognition from Images and Metadata
 
-This project implements a complete system to classify products based on images and structured metadata, combining Deep Learning (PyTorch) and Machine Learning (XGBoost). It is structured for clarity, modularity, and reusability.
+This repository contains a complete and production-ready pipeline to recognize products from images and structured data using PyTorch and XGBoost.
 
-<<<<<<< HEAD
-## Project Structure
-=======
+## Project Overview
+
+The goal is to automate product classification by combining:
+- **Image classification** using a Convolutional Neural Network (CNN) built with PyTorch
+- **Metadata classification** using XGBoost on tabular features
+- **Dashboard** for model performance visualization with Dash
+
+## Features
+
+- Fully modular project (separated code, models, data)
+- Configuration file (`config.yaml`) for training parameters
+- Model training scripts and test suite included
+- Interactive dashboard for result visualization
+
 ---
 
-## Structure du projet
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
+## 1. Installation
 
-```
-ProductRecognizer/
-├── product_recognizer/            # Source code
-│   ├── data/                      # Image and tabular data
-│   ├── models/                    # Saved models
-│   ├── pipeline/                  # Model and training modules
-│   └── visualizations/           # Figures and dashboards
-├── notebooks/                    # Exploratory notebooks (optional)
-├── dashboard/                    # Dash app for performance visualization
-├── tests/                        # Unit tests
-├── config.yaml                   # Training and path configuration
-├── train.py                      # Training pipeline
-├── setup.py                      # Installation file
-└── README.md                     # This file
-```
-
-## Installation
-
-<<<<<<< HEAD
-1. Clone the repository:
-=======
-## Installation
-
-### 1. Cloner le dépôt
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
 ```bash
 git clone https://github.com/your-username/ProductRecognizer.git
 cd ProductRecognizer
-```
-
-2. Create a virtual environment:
-```bash
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
-```
-
-3. Install dependencies:
-```bash
 pip install -e .
 ```
 
-## Required Data (Important)
+---
 
-<<<<<<< HEAD
-This project does not include the actual data to reduce repository size. You must add them manually:
-=======
-## Préparer les données
+## 2. ⚠️ Required Data (Not Included)
 
-Les données doivent être ajoutées localement.
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
+**This repository does not contain image or tabular data. You must download and place them locally.**
 
-### 1. Image Data
-- Download the dataset from [Fruits 360 - Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
-- Extract and place the folders as follows:
+### a. Image Data
+- Download the Fruits-360 dataset: https://www.kaggle.com/datasets/moltean/fruits
+- Extract and place the folders like this:
+
 ```
 product_recognizer/data/images/Training/
 product_recognizer/data/images/Test/
 ```
 
-### 2. Tabular Metadata
-- You need a CSV file with a column `label` and any other numeric or categorical features.
-- Place the file here:
+### b. Metadata (Tabular CSV)
+- Provide a CSV file named `product_metadata.csv` with:
+  - One column named `label`
+  - Other numeric or categorical features
+- Place it in:
+
 ```
 product_recognizer/data/product_metadata.csv
 ```
 
-## Running the Project
+---
 
-<<<<<<< HEAD
-Once the data is in place, train the models with:
-=======
-## Lancer l’entraînement
+## 3. Train the Models
 
-Tout est configurable dans `config.yaml`.
-
-### Exécuter le pipeline :
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
 ```bash
 python train.py
 ```
 
-This script:
-- Trains a CNN on images using PyTorch
-- Trains a classifier using XGBoost on tabular data
-- Saves both models under `product_recognizer/models/`
+This will:
+- Train the CNN on image data
+- Train the XGBoost model on metadata
+- Save both models in `product_recognizer/models/`
 
-<<<<<<< HEAD
-## Dashboard
-=======
 ---
 
-## Visualiser les résultats
+## 4. Launch the Dashboard
 
-Un tableau de bord Dash est disponible :
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
-
-To visualize performance:
 ```bash
 python dashboard/app.py
 ```
-Then open your browser at `http://localhost:8050`
 
-## Testing
+Open your browser at: [http://localhost:8050](http://localhost:8050)
 
-<<<<<<< HEAD
-Run basic structural tests:
-=======
 ---
 
-## Tests unitaires
+## 5. Run Tests
 
-Vérifie que la structure est correcte :
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
 ```bash
 pytest tests/
 ```
 
-## Author
-
-<<<<<<< HEAD
-This project was built as a complete demonstration of applied data science with vision and tabular data integration, using real datasets and common tools.
-=======
-## À propos du projet
-
-Ce projet est conçu pour illustrer une chaîne de traitement complète en Data Science appliquée à la vision par ordinateur et aux données structurées. Il peut servir de base pour des cas plus complexes, du transfer learning, ou des systèmes multi-modaux.
-
 ---
->>>>>>> f403f77231bdc26e546deef493ada918652c1fc5
+
+## About
+
+This project was built as a full-stack example of applied machine learning with vision and tabular data. All components are designed to be reusable, extensible, and readable.
