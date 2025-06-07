@@ -1,0 +1,12 @@
+training:
+  batch_size: 32
+  epochs: 5
+  learning_rate: 0.001
+  image_size: [100, 100]
+
+paths:
+  train_images: "product_recognizer/data/images/Training"
+  test_images: "product_recognizer/data/images/Test"
+  tabular_data: "product_recognizer/data/product_metadata.csv"
+  cnn_model_path: "product_recognizer/models/cnn_model.pt"
+  xgb_model_path: "product_recognizer/models/xgb_model.joblib"
