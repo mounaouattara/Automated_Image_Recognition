@@ -4,7 +4,7 @@ Ce projet propose un système complet de reconnaissance de produits à partir d'
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 ProductRecognizer/
@@ -24,7 +24,7 @@ ProductRecognizer/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Cloner le dépôt
 ```bash
@@ -45,7 +45,7 @@ pip install -e .
 
 ---
 
-## 📦 Préparer les données
+## Préparer les données
 
 ### 1. Télécharge les données d’images
 - Va sur [Fruits 360 - Kaggle](https://www.kaggle.com/datasets/moltean/fruits) et télécharge le dataset.
@@ -64,7 +64,7 @@ product_recognizer/data/product_metadata.csv
 
 ---
 
-## 🚀 Lancer l’entraînement
+## Lancer l’entraînement
 
 Tout est configurable dans `config.yaml`.
 
@@ -80,7 +80,7 @@ Cela :
 
 ---
 
-## 📊 Visualiser les résultats
+## Visualiser les résultats
 
 Un tableau de bord Dash est disponible :
 
@@ -92,7 +92,7 @@ Puis ouvre [http://localhost:8050](http://localhost:8050) dans ton navigateur.
 
 ---
 
-## 🧪 Tests unitaires
+## Tests unitaires
 
 Vérifie que la structure est correcte :
 ```bash
@@ -101,12 +101,8 @@ pytest tests/
 
 ---
 
-## 🧠 À propos du projet
+## À propos du projet
 
 Ce projet est conçu pour illustrer une chaîne de traitement complète en Data Science appliquée à la vision par ordinateur et aux données structurées. Il peut servir de base pour des cas plus complexes, du transfer learning, ou des systèmes multi-modaux.
 
 ---
-
-## 📍 Auteur
-
-Projet personnel – mis en place pour démontrer une approche rigoureuse de bout-en-bout dans un contexte de reconnaissance produit.
